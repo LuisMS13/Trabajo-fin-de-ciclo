@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Juegos.JuegosInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="@dimen/margen"
+        android:layout_marginRight="@dimen/margen">
+
+        <EditText
+            android:id="@+id/etNombreJuego"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/et_hin_nombre_juego"
+            android:drawableStart="@drawable/lupa"
+            android:background="@drawable/et_desing"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnConsultarJuego"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"
+            android:background="@drawable/button_desing"
+            android:text="@string/btn_consultar_juego" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvJuegos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margen"/>
+    </LinearLayout>
+
+
+</FrameLayout>

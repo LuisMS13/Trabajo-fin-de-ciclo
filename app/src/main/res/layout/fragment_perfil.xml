@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Perfil.PerfilFragment"
+    android:padding="@dimen/margen">
+
+    <LinearLayout
+        android:id="@+id/llPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor=" @color/browser_actions_bg_grey"/>
+
+            <TextView
+                android:id="@+id/tvJuegos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tus Juegos:"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor=" @color/browser_actions_bg_grey"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivPortadaJuego"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/profile"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEstadoJuegos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/llPerfil"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margen">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJuegosJugados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_juegos_jugados"
+                android:textColor="#f8e91a"
+                android:background="@drawable/button_desing2"
+                android:layout_weight="1.5"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJuegosCompletados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_juegos_completados"
+                android:textColor="#f8e91a"
+                android:background="@drawable/button_desing2"
+                android:layout_weight="1.2"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJuegosMedias"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_desing2"
+                android:textColor="#f8e91a"
+                android:text="@string/btn_juegos_medias"
+                android:layout_weight="1.5"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJuegosOlvidados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_desing2"
+                android:textColor="#f8e91a"
+                android:text="@string/btn_juegos_olvidados"
+                android:layout_weight="1.2"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

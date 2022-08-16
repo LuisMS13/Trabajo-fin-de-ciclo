@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.BuscarPersonas.DatosPersonaActivity">
+
+    <TextView
+        android:id="@+id/tvNombreDU"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margen"
+        android:textSize="@dimen/top_txt_reg"
+        android:textStyle="bold"
+        android:fontFamily="@font/righteous_normal"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/tvEmailDU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tam_txt_reg"
+            android:text="@string/email_du"
+            android:fontFamily="@font/righteous_normal"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margen"
+            app:layout_constraintTop_toBottomOf="@id/tvNombreDU"
+            />
+
+        <TextView
+            android:id="@+id/tvTelefDU"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tam_txt_reg"
+            android:text="@string/telef_du"
+            android:fontFamily="@font/righteous_normal"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margen"
+            app:layout_constraintTop_toBottomOf="@id/tvEmailDU"/>
+
+    <LinearLayout
+        android:id="@+id/llEstadoJuegos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvTelefDU"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margen">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="@dimen/margen">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJuegosJugados2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_juegos_jugados"
+                android:textColor="#f8e91a"
+                android:background="@drawable/button_desing2"
+                android:layout_weight="1.5"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJuegosCompletados2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_juegos_completados"
+                android:textColor="#f8e91a"
+                android:background="@drawable/button_desing2"
+                android:layout_weight="1.2"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJuegosMedias2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_desing2"
+                android:textColor="#f8e91a"
+                android:text="@string/btn_juegos_medias"
+                android:layout_weight="1.5"
+                />
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnJuegosOlvidados2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_desing2"
+                android:textColor="#f8e91a"
+                android:text="@string/btn_juegos_olvidados"
+                android:layout_weight="1.2"
+                android:layout_marginLeft="30dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
